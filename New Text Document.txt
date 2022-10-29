@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+	<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"; method="POST" >
+		<lable>username</label>
+		<input type="Text"  name='username'></input><span class='error'><?php echo '*'.$usererr ?></span><br><br>
+
+		<lable>password</label>
+		<input type="password" name="password"></input><span class='error'><?php echo '*'.$passerr ?></span><br><br>
+	
+
+	
+	<lable>Employee number</label>
+	<input type="number" name='employ' min="1" max="99999"></input><br>
+	<span class='error'><?php echo '*'.$emperr ?></span><br>
+
+	<lable>which website you want to log in to? </label>
+	<select name="website" style="background-color:#6699ff;color:#ff9900">
+		<option ></option>
+		<option value="google">google</option>
+		<option value="facebook">facebook</option>
+		<option value="twitter">twitter</option>
+		<option value="quora">quora</option>
+	</select>
+	<br>
+	<span class='error'><?php echo '*'.$weberr ?></span><br>
+
+	<p>Gender:</p>
+		<input type="radio" name = "gender" class="gender" value="Male" name="g" style="margin-left:105px;"></input>
+		<label>Male</label><br>
+		<input type="radio" name = "gender" class="gender" value="Female" name="g" style="margin-left:105px;"></input>
+		<label>Female</label><br>
+	<span class='error'><?php echo '*'.$generr ?></span><br>
+		
+
+	<lable>MovieWatched:</label>
+		<input type="checkbox" name='movies[]'  value="BB">BB</input><br>
+		<input type="checkbox" name='movies[]'  value="RRR" style="margin-left:105px;">RRR</input><br>
+		<input type="checkbox"  name='movies[]'  value="KGF" style="margin-left:105px;">KGF</input><br>
+	<span class='error'><?php echo "*".$moverr ?></span><br>
+		
+	<input type="submit" id='submit' style="background-color:#00cc00;" ></input><br>
+	<form>
+</form>
+</body>
+
+</html>
