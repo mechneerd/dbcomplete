@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
     <title>FORM FOR PRATICE</title>
@@ -81,7 +81,8 @@ function sanitize($data){
 
 echo $submitok;
 
-if($submitok=1){
+if($name !=='' && $pass !=='' && $emp !==''&& $web !==''&& $gen !==''){
+
 $servername = 'localhost';
 $username='root';
 $password='';
